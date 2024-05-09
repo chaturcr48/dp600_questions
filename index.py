@@ -10,7 +10,7 @@ with open('questions.json', 'r') as file:
 def quiz():
     import random
     random.shuffle(questions_data['questions'])
-    return render_template('quiz.html', questions=questions_data['questions'], length = len(questions_data['questions']))
+    return render_template('quiz.html', questions=questions_data['questions'], length=len(questions_data['questions']))
 
 @app.route('/submit_quiz', methods=['POST'])
 def submit_quiz():

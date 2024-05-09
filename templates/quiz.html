@@ -6,7 +6,7 @@
     <title>Quiz</title>
 </head>
 <body>
-    <h1>Quiz  Total Questions: {{ length }}</h1>
+    <h1>Quiz :: Total Questions: {{ length }}</h1>
     <form action="/submit_quiz" method="post">
         {% for question in questions %}
             <p>{{ question['question'] }}</p>

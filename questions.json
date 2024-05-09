@@ -755,8 +755,7 @@
       "options": [
         "a lakehouse",
         "an Azure SQL database",
-        "a warehouse",
-        "a KQL database"
+        "a warehouse", "a KQL database"
       ],
       "correct_answers": ["a lakehouse", "a warehouse"]
     }
