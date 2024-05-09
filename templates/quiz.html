@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Quiz</h1> <h2>Total Questions: {{ length }}</h2>
+    <form action="/submit_quiz" method="post">
+        {% for question in questions %}
+            <p>{{ question['question'] }}</p>
+            {% if 'correct_answers' in question %}
+                <!-- Question with multiple correct answers -->
+                {% for option in question['options'] %}
+                    <input type="checkbox" id="{{ option }}" name="{{ question['id'] }}[]" value="{{ option }}">
+                    <label for="{{ option }}">{{ option }}</label><br>
+                {% endfor %}
+            {% else %}
+                <!-- Question with single correct answer -->
+                {% for option in question['options'] %}
+                    <input type="radio" id="{{ option }}" name="{{ question['id'] }}" value="{{ option }}">
+                    <label for="{{ option }}">{{ option }}</label><br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+

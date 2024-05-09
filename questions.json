@@ -1,0 +1,764 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "You need to ensure that Contoso can use version control to meet the data analytics requirements and the general requirements. What should you do?",
+      "options": [
+        "Store all the semantic models and reports in Data Lake Gen2 storage.",
+        "Modify the settings of the Research workspaces to use a GitHub repository.",
+        "Modify the settings of the Research division workspaces to use an Azure Repos repository.",
+        "Store all the semantic models and reports in Microsoft OneDrive."
+      ],
+      "answer": "Modify the settings of the Research division workspaces to use an Azure Repos repository."
+    },
+    {
+      "id": "q3",
+      "question": "You need to recommend which type of Fabric capacity SKU meets the data analytics requirements for the Research division. What should you recommend?",
+      "options": ["A", "EM", "P", "F"],
+      "answer": "F"
+    },    
+    {
+      "id": "q5",
+      "question": "What should you use to implement calculation groups for the Research division semantic models?",
+      "options": ["Microsoft Power BI Desktop", "the Power BI service", "DAX Studio", "Tabular Editor"],
+      "answer": "Tabular Editor"
+    },    
+    {
+      "id": "q7",
+      "question": "You need to refresh the Orders table of the Online Sales department. The solution must meet the semantic model requirements. What should you include in the solution?",
+      "options": [
+        "an Azure Data Factory pipeline that executes a Stored procedure activity to retrieve the maximum value of the OrderID column in the destination lakehouse",
+        "an Azure Data Factory pipeline that executes a Stored procedure activity to retrieve the minimum value of the OrderID column in the destination lakehouse",
+        "an Azure Data Factory pipeline that executes a dataflow to retrieve the minimum value of the OrderID column in the destination lakehouse",
+        "an Azure Data Factory pipeline that executes a dataflow to retrieve the maximum value of the OrderID column in the destination lakehouse"
+      ],
+      "answer": "an Azure Data Factory pipeline that executes a dataflow to retrieve the maximum value of the OrderID column in the destination lakehouse"
+    },
+    {
+      "id": "q8",
+      "question": "Which syntax should you use in a notebook to access the Research division data for Productline1?",
+      "options": [
+        "spark.read.format(\"delta\").load(\"Tables/productline1/ResearchProduct\")",
+        "spark.sql(\"SELECT * FROM Lakehouse1.ResearchProduct\")",
+        "external_table('Tables/ResearchProduct')",
+        "external_table(ResearchProduct)"
+      ],
+      "answer": "spark.sql(\"SELECT * FROM Lakehouse1.ResearchProduct\")"
+    },
+    {
+      "id": "q12",
+      "question": "You need to recommend a solution to prepare the tenant for the PoC. Which two actions should you recommend performing from the Fabric Admin portal?",
+      "options": [
+        "Enable the Users can try Microsoft Fabric paid features option for the entire organization.",
+        "Enable the Users can try Microsoft Fabric paid features option for specific security groups.",
+        "Enable the Allow Azure Active Directory guest users to access Microsoft Fabric option for specific security groups.",
+        "Enable the Users can create Fabric items option and exclude specific security groups.",
+        "Enable the Users can create Fabric items option for specific security groups."
+      ],
+      "correct_answers": ["Enable the Users can try Microsoft Fabric paid features option for specific security groups.", "Enable the Users can create Fabric items option for specific security groups."]
+    },
+    {
+      "id": "q14",
+      "question": "You need to implement the date dimension in the data store. The solution must meet the technical requirements. What are two ways to achieve the goal? Each correct answer presents a complete solution.",
+      "options": [
+        "Populate the date dimension table by using a dataflow.",
+        "Populate the date dimension table by using a Copy activity in a pipeline.",
+        "Populate the date dimension view by using T-SQL.",
+        "Populate the date dimension table by using a Stored procedure activity in a pipeline."
+      ],
+      "correct_answers": ["Populate the date dimension table by using a dataflow.", "Populate the date dimension table by using a Stored procedure activity in a pipeline."]
+    },
+    {
+      "id": "q15",
+      "question": "You need to ensure the data loading activities in the AnalyticsPOC workspace are executed in the appropriate sequence. The solution must meet the technical requirements. What should you do?",
+      "options": [
+        "Create a dataflow that has multiple steps and schedule the dataflow.",
+        "Create and schedule a Spark notebook.",
+        "Create and schedule a Spark job definition.",
+        "Create a pipeline that has dependencies between activities and schedule the pipeline."
+      ],
+      "answer": "Create a pipeline that has dependencies between activities and schedule the pipeline."
+    },
+    {
+      "id": "q16",
+      "question": "Ensures that the report and the semantic model only contain data from the current and previous year. Ensures that the report respects any table-level security specified in the source data store. Minimizes the execution time of report queries. What should you recommend using to ingest the customer data into the data store in the AnalyticsPOC workspace?",
+      "options": [
+        "A stored procedure",
+        "A pipeline that contains a KQL activity",
+        "A Spark notebook",
+        "A dataflow"
+      ],
+      "answer": "A dataflow"
+    },
+    {
+      "id": "q17",
+      "question": "Ensures that the report and the semantic model only contain data from the current and previous year. Ensures that the report respects any table-level security specified in the source data store. Minimizes the execution time of report queries. Which type of data store should you recommend in the AnalyticsPOC workspace?",
+      "options": [
+        "A data lake",
+        "A warehouse",
+        "A lakehouse",
+        "An external Hive metastore"
+      ],
+      "answer": "A lakehouse"
+    },
+    {
+      "id": "q22",
+      "question": "You are the administrator of a Fabric workspace that contains a lakehouse named Lakehouse1. Lakehouse1 contains the following tables: Table1: A Delta table created by using a shortcut Table2: An external table created by using Spark Table3: A managed table - You plan to connect to Lakehouse1 by using its SQL endpoint. What will you be able to do after connecting to Lakehouse1?",
+      "options": [
+        "Read Table3.",
+        "Update the data Table3.",
+        "Read Table2.",
+        "Update the data in Table1."
+      ],
+      "answer": "Read Table3."
+    },
+    {
+      "id": "q23",
+      "question": "You have a Fabric tenant that contains a warehouse. You use a dataflow to load a new dataset from OneLake to the warehouse. You need to add a PowerQuery step to identify the maximum values for the numeric columns. Which function should you include in the step?",
+      "options": [
+        "Table.MaxN",
+        "Table.Max",
+        "Table.Range",
+        "Table.Profile"
+      ],
+      "answer": "Table.Profile"
+    },
+    {
+      "id": "q24",
+      "question": "You have a Fabric tenant that contains a machine learning model registered in a Fabric workspace. You need to use the model to generate predictions by using the PREDICT function in a Fabric notebook. Which two languages can you use to perform model scoring? Each correct answer presents a complete solution.",
+      "options": [
+        "T-SQL",
+        "DAX",
+        "Spark SQL",
+        "PySpark"
+      ],
+      "correct_answers": ["Spark SQL", "PySpark"]
+    },
+    {
+      "id": "q25",
+      "question": "You are analyzing the data in a Fabric notebook. You have a Spark DataFrame assigned to a variable named df. You need to use the Chart view in the notebook to explore the data manually. Which function should you run to make the data available in the Chart view?",
+      "options": [
+        "displayHTML",
+        "show",
+        "write",
+        "display"
+      ],
+      "answer": "display"
+    },
+    {
+      "id": "q26",
+      "question": "You have a Fabric tenant that contains a Microsoft Power BI report named Report1. Report1 includes a Python visual. Data displayed by the visual is grouped automatically and duplicate rows are NOT displayed. You need all rows to appear in the visual. What should you do?",
+      "options": [
+        "Reference the columns in the Python code by index.",
+        "Modify the Sort Column By property for all columns.",
+        "Add a unique field to each row.",
+        "Modify the Summarize By property for all columns."
+      ],
+      "answer": "Modify the Summarize By property for all columns."
+    },
+    {
+      "id": "q27",
+      "question": "You have a Fabric workspace named Workspace1 that contains a dataflow named Dataflow1. Dataflow1 has a query that returns 2,000 rows. You view the query in Power Query as shown in the following exhibit. What can you identify about the pickupLongitude column?",
+      "options": [
+        "The column has duplicate values.",
+        "All the table rows are profiled.",
+        "The column has missing values.",
+        "There are 935 values that occur only once."
+      ],
+      "answer": "The column has duplicate values."
+    },
+    {
+      "id": "q28",
+      "question": "You have a Fabric tenant named Tenant1 that contains a workspace named WS1. WS1 uses a capacity named C1 and contains a dataset named DS1. You need to ensure read-write access to DS1 is available by using XMLA endpoint. What should be modified first?",
+      "options": [
+        "the DS1 settings",
+        "the WS1 settings",
+        "the C1 settings",
+        "the Tenant1 settings"
+      ],
+      "answer": "the C1 settings"
+    },
+    {
+      "id": "q29",
+      "question": "You have a Fabric tenant that contains a workspace named Workspace1. Workspace1 is assigned to a Fabric capacity. You need to recommend a solution to provide users with the ability to create and publish custom Direct Lake semantic models by using external tools. The solution must follow the principle of least privilege. Which three actions in the Fabric Admin portal should you include in the recommendation? Each correct answer presents part of the solution.",
+      "options": [
+        "From the Tenant settings, set Allow XMLA Endpoints and Analyze in Excel with on-premises datasets to Enabled.",
+        "From the Tenant settings, set Allow Azure Active Directory guest users to access Microsoft Fabric to Enabled.",
+        "From the Tenant settings, select Users can edit data model in the Power BI service.",
+        "From the Capacity settings, set XMLA Endpoint to Read Write.",
+        "From the Tenant settings, set Users can create Fabric items to Enabled.",
+        "From the Tenant settings, enable Publish to Web."
+      ],
+      "correct_answers": ["From the Tenant settings, set Allow XMLA Endpoints and Analyze in Excel with on-premises datasets to Enabled.", "From the Capacity settings, set XMLA Endpoint to Read Write.", "From the Tenant settings, set Users can create Fabric items to Enabled."]
+    },
+    {
+      "id": "q30",
+      "question": "You are creating a semantic model in Microsoft Power BI Desktop. You plan to make bulk changes to the model by using the Tabular Model Definition Language (TMDL) extension for Microsoft Visual Studio Code. You need to save the semantic model to a file. Which file format should you use?",
+      "options": [
+        "PBIP",
+        "PBIX",
+        "PBIT",
+        "PBIDS"
+      ],
+      "answer": "PBIP"
+    },
+    {
+      "id": "q32",
+      "question": "You plan to deploy Microsoft Power BI items by using Fabric deployment pipelines. You have a deployment pipeline that contains three stages named Development, Test, and Production. A workspace is assigned to each stage. You need to provide Power BI developers with access to the pipeline. The solution must meet the following requirements: Ensure that the developers can deploy items to the workspaces for Development and Test. Prevent the developers from deploying items to the workspace for Production. Follow the principle of least privilege. Which three levels of access should you assign to the developers? Each correct answer presents part of the solution.",
+      "options": [
+        "Build permission to the production semantic models",
+        "Admin access to the deployment pipeline",
+        "Viewer access to the Development and Test workspaces",
+        "Viewer access to the Production workspace",
+        "Contributor access to the Development and Test workspaces",
+        "Contributor access to the Production workspace"
+      ],
+      "correct_answers": ["Admin access to the deployment pipeline", "Viewer access to the Production workspace", "Contributor access to the Development and Test workspaces"]
+    },
+    {
+      "id": "q33",
+      "question": "You have a Fabric workspace that contains a DirectQuery semantic model. The model queries a data source that has 500 million rows. You have a Microsoft Power Bi report named Report1 that uses the model. Report1 contains visuals on multiple pages. You need to reduce the query execution time for the visuals on all the pages. What are two features that you can use? Each correct answer presents a complete solution.",
+      "options": [
+        "user-defined aggregations",
+        "automatic aggregation",
+        "query caching",
+        "OneLake integration"
+      ],
+      "correct_answers": ["user-defined aggregations", "automatic aggregation"]
+    },
+    {
+      "id": "q34",
+      "question": "You have a Fabric tenant that contains 30 CSV files in OneLake. The files are updated daily. You create a Microsoft Power BI semantic model named Model1 that uses the CSV files as a data source. You configure incremental refresh for Model1 and publish the model to a Premium capacity in the Fabric tenant. When you initiate a refresh of Model1, the refresh fails after running out of resources. What is a possible cause of the failure?",
+      "options": [
+        "Query folding is occurring.",
+        "Only refresh complete days is selected.",
+        "XMLA Endpoint is set to Read Only.",
+        "Query folding is NOT occurring.",
+        "The delta type of the column used to partition the data has changed."
+      ],
+      "answer": "The delta type of the column used to partition the data has changed."
+    },
+    {
+      "id": "q35",
+      "question": "You have a Fabric tenant that uses a Microsoft Power BI Premium capacity. You need to enable scale-out for a semantic model. What should you do first?",
+      "options": [
+        "At the semantic model level, set Large dataset storage format to Off.",
+        "At the tenant level, set Create and use Metrics to Enabled.",
+        "At the semantic model level, set Large dataset storage format to On.",
+        "At the tenant level, set Data Activator to Enabled"
+      ],
+      "answer": "At the semantic model level, set Large dataset storage format to On."
+    },
+    {
+      "id": "q36",
+      "question": "You have a Fabric tenant that contains a warehouse. The warehouse uses row-level security (RLS). You create a Direct Lake semantic model that uses the Delta tables and RLS of the warehouse. When users interact with a report built from the model, which mode will be used by the DAX queries?",
+      "options": [
+        "DirectQuery",
+        "Dual",
+        "Direct Lake",
+        "Import"
+      ],
+      "answer": "DirectQuery"
+    },
+    {
+      "id": "q37",
+      "question": "You have a Fabric tenant that contains a complex semantic model. The model is based on a star schema and contains many tables, including a fact table named Sales. You need to create a diagram of the model. The diagram must contain only the Sales table and related tables. What should you use from Microsoft Power BI Desktop?",
+      "options": [
+        "data categories",
+        "Data view",
+        "Model view",
+        "DAX query view"
+      ],
+      "answer": "Model view"
+    },
+    {
+      "id": "q38",
+      "question": "You have a Fabric tenant that contains a semantic model. The model uses Direct Lake mode. You suspect that some DAX queries load unnecessary columns into memory. You need to identify the frequently used columns that are loaded into memory. What are two ways to achieve the goal? Each correct answer presents a complete solution.",
+      "options": [
+        "Use the Analyze in Excel feature.",
+        "Use the Vertipaq Analyzer tool.",
+        "Query the $System.DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS dynamic management view (DMV).",
+        "Query the DISCOVER_MEMORYGRANT dynamic management view (DMV)."
+      ],
+      "correct_answers": ["Use the Vertipaq Analyzer tool.", "Query the $System.DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS dynamic management view (DMV)."]
+    },
+    {
+      "id": "q39",
+      "question": "You need to reduce the memory used by Model1 and the time it takes to refresh the model. Which two actions should you perform? Each correct answer presents part of the solution.",
+      "options": [
+        "Split OrderDateTime into separate date and time columns.",
+        "Replace TotalQuantity with a calculated column.",
+        "Convert Quantity into the Text data type.",
+        "Replace TotalSalesAmount with a measure."
+      ],
+      "correct_answers": ["Replace TotalQuantity with a calculated column.", "Replace TotalSalesAmount with a measure."]
+    },
+    {
+      "id": "q43",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains a subfolder named Subfolder1 that contains CSV files. You need to convert the CSV files into the delta format that has V-Order optimization enabled. What should you do from Lakehouse explorer?",
+      "options": [
+        "Use the Load to Tables feature.",
+        "Create a new shortcut in the Files section.",
+        "Create a new shortcut in the Tables section.",
+        "Use the Optimize feature."
+      ],
+      "answer": "Use the Load to Tables feature."
+    },
+    {
+      "id": "q44",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains an unpartitioned table named Table1. You plan to copy data to Table1 and partition the table based on a date column in the source data. You create a Copy activity to copy the data to Table1. You need to specify the partition column in the Destination settings of the Copy activity. What should you do first?",
+      "options": [
+        "From the Destination tab, set Mode to Append.",
+        "From the Destination tab, select the partition column.",
+        "From the Source tab, select Enable partition discovery.",
+        "From the Destination tabs, set Mode to Overwrite."
+      ],
+      "answer": "From the Destination tabs, set Mode to Overwrite."
+    },
+    {
+      "id": "q45",
+      "question": "You have source data in a folder on a local computer. You need to create a solution that will use Fabric to populate a data store. The solution must meet the following requirements: Support the use of dataflows to load and append data to the data store. Ensure that Delta tables are V-Order optimized and compacted automatically. Which type of data store should you use?",
+      "options": [
+        "a lakehouse",
+        "an Azure SQL database",
+        "a warehouse",
+        "a KQL database"
+      ],
+      "answer": "a lakehouse"
+    },
+    {
+      "id": "q46",
+      "question": "You need to transform the data columns into attribute-value pairs, where columns become rows. You select the VendorID column. Which transformation should you select from the context menu of the VendorID column?",
+      "options": [
+        "Group by",
+        "Unpivot columns",
+        "Unpivot other columns",
+        "Split column",
+        "Remove other columns"
+      ],
+      "answer": "Unpivot other columns"
+    },
+    {
+      "id": "q47",
+      "question": "You have a Fabric tenant that contains a data pipeline. You need to ensure that the pipeline runs every four hours on Mondays and Fridays. To what should you set Repeat for the schedule?",
+      "options": [
+        "Daily",
+        "By the minute",
+        "Weekly",
+        "Hourly"
+      ],
+      "answer": "Weekly"
+    },
+    {
+      "id": "q48",
+      "question": "You have a Fabric tenant that contains a warehouse. Several times a day, the performance of all warehouse queries degrades. You suspect that Fabric is throttling the compute used by the warehouse. What should you use to identify whether throttling is occurring?",
+      "options": [
+        "the Capacity settings",
+        "the Monitoring hub",
+        "dynamic management views (DMVs)",
+        "the Microsoft Fabric Capacity Metrics app"
+      ],
+      "answer": "the Microsoft Fabric Capacity Metrics app"
+    },
+    {
+      "id": "q49",
+      "question": "You have a Fabric tenant that contains a warehouse. A user discovers that a report that usually takes two minutes to render has been running for 45 minutes and has still not rendered. You need to identify what is preventing the report query from completing. Which dynamic management view (DMV) should you use?",
+      "options": [
+        "sys.dm_exec_requests",
+        "sys.dm_exec_sessions",
+        "sys.dm_exec_connections",
+        "sys.dm_pdw_exec_requests"
+      ],
+      "answer": "sys.dm_exec_requests"
+    },
+    {
+      "id": "q50",
+      "question": "You need to create a data loading pattern for a Type 1 slowly changing dimension (SCD). Which two actions should you include in the process? Each correct answer presents part of the solution.",
+      "options": [
+        "Update rows when the non-key attributes have changed.",
+        "Insert new rows when the natural key exists in the dimension table, and the non-key attribute values have changed.",
+        "Update the effective end date of rows when the non-key attribute values have changed.",
+        "Insert new records when the natural key is a new value in the table."
+      ],
+      "correct_answers": ["Update rows when the non-key attributes have changed.", "Insert new records when the natural key is a new value in the table."]
+    },
+    {
+      "id": "q51",
+      "question": "You are analyzing customer purchases in a Fabric notebook by using PySpark. You have the following DataFrames: transactions: Contains five columns named transaction_id, customer_id, product_id, amount, and date and has 10 million rows, with each row representing a transaction. customers: Contains customer details in 1,000 rows and three columns named customer_id, name, and country. You need to join the DataFrames on the customer_id column. The solution must minimize data shuffling. You write the following code. from pyspark.sql import functions as F results = Which code should you run to populate the results DataFrame?",
+      "options": [
+        "transactions.join(F.broadcast(customers), transactions.customer_id == customers.customer_id)",
+        "transactions.join(customers, transactions.customer_id == customers.customer_id).distinct()",
+        "transactions.join(customers, transactions.customer_id == customers.customer_id)",
+        "transactions.crossJoin(customers).where(transactions.customer_id == customers.customer_id)"
+      ],
+      "answer": "transactions.join(F.broadcast(customers), transactions.customer_id == customers.customer_id)"
+    },
+    {
+      "id": "q52",
+      "question": "You have an Azure Repos repository named Repo1 and a Fabric-enabled Microsoft Power BI Premium capacity. The capacity contains two workspaces named Workspace1 and Workspace2. Git integration is enabled at the workspace level. You plan to use Microsoft Power BI Desktop and Workspace1 to make version-controlled changes to a semantic model stored in Repo1. The changes will be built and deployed to Workspace2 by using Azure Pipelines. You need to ensure that report and semantic model definitions are saved as individual text files in a folder hierarchy. The solution must minimize development and maintenance effort. In which file format should you save the changes?",
+      "options": [
+        "PBIP",
+        "PBIDS",
+        "PBIT",
+        "PBIX"
+      ],
+      "answer": "PBIP"
+    },
+    {
+      "id": "q53",
+      "question": "You have a Fabric workspace named Workspace1 that contains a lakehouse named Lakehouse1. In Workspace1, you create a data pipeline named Pipeline1. You have CSV files stored in an Azure Storage account. You need to add an activity to Pipeline1 that will copy data from the CSV files to Lakehouse1. The activity must support Power Query M formula language expressions. Which type of activity should you add?",
+      "options": [
+        "Dataflow",
+        "Notebook",
+        "Script",
+        "Copy data"
+      ],
+      "answer": "Dataflow"
+    },
+    {
+      "id": "q54",
+      "question": "You have a Fabric tenant that contains a lakehouse. You plan to use a visual query to merge two tables. You need to ensure that the query returns all the rows in both tables. Which type of join should you use?",
+      "options": [
+        "inner",
+        "full outer",
+        "left outer",
+        "right anti",
+        "right outer",
+        "left anti"
+      ],
+      "answer": "full outer"
+    },
+    {
+      "id": "q55",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains a Delta table that has one million Parquet files. You need to remove files that were NOT referenced by the table during the past 30 days. The solution must ensure that the transaction log remains consistent, and the ACID properties of the table are maintained. What should you do?",
+      "options": [
+        "From OneLake file explorer, delete the files.",
+        "Run the OPTIMIZE command and specify the Z-order parameter.",
+        "Run the OPTIMIZE command and specify the V-order parameter.",
+        "Run the VACUUM command."
+      ],
+      "answer": "Run the VACUUM command."
+    },
+    {
+      "id": "q56",
+      "question": "You have a Fabric workspace named Workspace1 and an Azure SQL database. You plan to create a dataflow that will read data from the database, and then transform the data by performing an inner join. You need to ignore spaces in the values when performing the inner join. The solution must minimize development effort. What should you do?",
+      "options": [
+        "Append the queries by using fuzzy matching.",
+        "Merge the queries by using fuzzy matching.",
+        "Append the queries by using a lookup table.",
+        "Merge the queries by using a lookup table."
+      ],
+      "answer": "Merge the queries by using fuzzy matching."
+    },
+    {
+      "id": "q57",
+      "question": "You have a Fabric tenant that contains a warehouse named Warehouse1. Warehouse1 contains two schemas name schema1 and schema2 and a table named schema1.city. You need to make a copy of schema1.city in schema2. The solution must minimize the copying of data. Which T-SQL statement should you run?",
+      "options": [
+        "INSERT INTO schema2.city SELECT * FROM schema1.city;",
+        "SELECT * INTO schema2.city FROM schema1.city;",
+        "CREATE TABLE schema2.city AS CLONE OF schema1.city;",
+        "CREATE TABLE schema2.city AS SELECT * FROM schema1.city;"
+      ],
+      "answer": "CREATE TABLE schema2.city AS CLONE OF schema1.city;"
+    },
+    {
+      "id": "q58",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. You need to prevent new tables added to Lakehouse1 from being added automatically to the default semantic model of the lakehouse. What should you configure?",
+      "options": [
+        "the SQL analytics endpoint settings",
+        "the semantic model settings",
+        "the workspace settings",
+        "the Lakehouse1 settings"
+      ],
+      "answer": "the SQL analytics endpoint settings"
+    },
+    {
+      "id": "q59",
+      "question": "You have a Fabric tenant. You are creating an Azure Data Factory pipeline. You have a stored procedure that returns the number of active customers and their average sales for the current month. You need to add an activity that will execute the stored procedure in a warehouse. The returned values must be available to the downstream activities of the pipeline. Which type of activity should you add?",
+      "options": [
+        "Switch",
+        "Copy data",
+        "Append variable",
+        "Lookup"
+      ],
+      "answer": "Lookup"
+    },
+    {
+      "id": "q60",
+      "question": "You have a Fabric tenant that contains two workspaces named Workspace1 and Workspace2. Workspace1 contains a lakehouse named Lakehouse1. Workspace2 contains a lakehouse named Lakehouse2. Lakehouse1 contains a table named dbo.Sales. Lakehouse2 contains a table named dbo.Customers. You need to ensure that you can write queries that reference both dbo.Sales and dbo.Customers in the same SQL query without making additional copies of the tables. What should you use?",
+      "options": [
+        "a shortcut",
+        "a dataflow",
+        "a view",
+        "a managed table"
+      ],
+      "answer": "a view"
+    },
+    {
+      "id": "q61",
+      "question": "You are designing a star schema model that will contain a customer dimension. The customer dimension table will be a Type 2 slowly changing dimension (SCD). You need to recommend which columns to add to the table. The columns must NOT already exist in the source. Which three types of columns should you recommend? Each correct answer presents part of the solution.",
+      "options": [
+        "a foreign key",
+        "a natural key",
+        "an effective end date and time",
+        "a surrogate key",
+        "an effective end date and time"
+      ],
+      "correct_answers": ["an effective end date and time", "a surrogate key", "an effective end date and time"]
+    },
+    {
+      "id": "q62",
+      "question": "You have a Fabric tenant. You plan to create a data pipeline named Pipeline1. Pipeline1 will include two activities that will execute in sequence. You need to ensure that a failure of the first activity will NOT block the second activity. Which conditional path should you configure between the first activity and the second activity?",
+      "options": [
+        "Upon Failure",
+        "Upon Completion",
+        "Upon Skip",
+        "Upon Skip"
+      ],
+      "answer": "Upon Completion"
+    },
+    {
+      "id": "q63",
+      "question": "You have a Microsoft Power BI semantic model. You need to identify any surrogate key columns in the model that have the Summarize By property set to a value other than to None. The solution must minimize effort. What should you use?",
+      "options": [
+        "DAX Formatter in DAX Studio",
+        "Model explorer in Microsoft Power BI Desktop",
+        "Model view in Microsoft Power BI Desktop",
+        "Best Practice Analyzer in Tabular Editor"
+      ],
+      "answer": "Best Practice Analyzer in Tabular Editor"
+    },
+    {
+      "id": "q64",
+      "question": "You have a Fabric tenant that contains a semantic model. The model contains 15 tables. You need to programmatically change each column that ends in the word Key to meet the following requirements: • Hide the column. • Set Nullable to False • Set Summarize By to None. • Set Available in MDX to False. • Mark the column as a key column. What should you use?",
+      "options": [
+        "Microsoft Power BI Desktop",
+        "ALM Toolkit",
+        "Tabular Editor",
+        "DAX Studio"
+      ],
+      "answer": "Tabular Editor"
+    },
+    {
+      "id": "q65",
+      "question": "You have a Microsoft Power BI report named Report1 that uses a Fabric semantic model. Users discover that Report1 renders slowly. You open Performance analyzer and identify that a visual named Orders By Date is the slowest to render. The duration breakdown for Orders By Date is shown in the following table. What will provide the greatest reduction in the rendering duration of Report1?",
+      "options": [
+        "Enable automatic page refresh.",
+        "Optimize the DAX query of Orders By Date by using DAX Studio.",
+        "Change the visual type of Orders By Date.",
+        "Reduce the number of visuals in Report1"
+      ],
+      "answer": "Reduce the number of visuals in Report1"
+    },
+    {
+      "id": "q66",
+      "question": "You have a custom Direct Lake semantic model named Model1 that has one billion rows of data. You use Tabular Editor to connect to Model1 by using the XMLA endpoint. You need to ensure that when users interact with reports based on Model1, their queries always use Direct Lake mode. What should you do?",
+      "options": [
+        "From Model, configure the Default Mode option.",
+        "From Partitions, configure the Mode option.",
+        "From Model, configure the Storage Location option.",
+        "From Model, configure the Direct Lake Behavior option."
+      ],
+      "answer": "From Model, configure the Direct Lake Behavior option."
+    },
+    {
+      "id": "q67",
+      "question": "You have a Microsoft Power BI semantic model that contains measures. The measures use multiple CALCULATE functions and a FILTER function. You are evaluating the performance of the measures. In which use case will replacing the FILTER function with the KEEPFILTERS function reduce execution time?",
+      "options": [
+        "when the FILTER function uses a nested calculate function",
+        "when the FILTER function references a measure",
+        "when the FILTER function references columns from multiple tables",
+        "when the FILTER function references a column from a single table that uses Import mode"
+      ],
+      "answer": "when the FILTER function uses a nested calculate function"
+    },
+    {
+      "id": "q68",
+      "question": "You have a semantic model named Model1. Model1 contains five tables that all use Import mode. Model1 contains a dynamic row-level security (RLS) role named HR. The HR role filters employee data so that HR managers only see the data of the department to which they are assigned. You publish Model1 to a Fabric tenant and configure RLS role membership. You share the model and related reports to users. An HR manager reports that the data they see in a report is incomplete. What should you do to validate the data seen by the HR Manager?",
+      "options": [
+        "Select Test as role to view the data as the HR role.",
+        "Filter the data in the report to match the intended logic of the filter for the HR department.",
+        "Select Test as role to view the report as the HR manager.",
+        "Ask the HR manager to open the report in Microsoft Power BI Desktop."
+      ],
+      "answer": "Select Test as role to view the report as the HR manager."
+    },
+    {
+      "id": "q69",
+      "question": "You have a Microsoft Fabric tenant that contains a dataflow. You are exploring a new semantic model. From Power Query, you need to view column information as shown in the following exhibit. Which three Data view options should you select? Each correct answer presents part of the solution.",
+      "options": [
+        "Show column value distribution",
+        "Enable details pane",
+        "Enable column profile",
+        "Show column quality details",
+        "Show column profile in details pane"
+      ],
+      "correct_answers": ["Show column value distribution", "Enable column profile", "Show column quality details"]
+    },
+    {
+      "id": "q70",
+      "question": "You have a Fabric notebook that has the Python code and output shown in the following exhibit. Which type of analytics are you performing?",
+      "options": [
+        "descriptive",
+        "diagnostic",
+        "prescriptive",
+        "predictive"
+      ],
+      "answer": "descriptive"
+    },
+    {
+      "id": "q71",
+      "question": "You have a Fabric tenant that contains JSON files in OneLake. The files have one billion items. You plan to perform time series analysis of the items. You need to transform the data, visualize the data to find insights, perform anomaly detection, and share the insights with other business users. The solution must meet the following requirements: • Use parallel processing. • Minimize the duplication of data. • Minimize how long it takes to load the data. What should you use to transform and visualize the data?",
+      "options": [
+        "the PySpark library in a Fabric notebook",
+        "the pandas library in a Fabric notebook",
+        "a Microsoft Power BI report that uses core visuals"
+      ],
+      "answer": "the PySpark library in a Fabric notebook"
+    },
+    {
+      "id": "q72",
+      "question": "You have a Fabric tenant that contains customer churn data stored as Parquet files in OneLake. The data contains details about customer demographics and product usage. You create a Fabric notebook to read the data into a Spark DataFrame. You then create column charts in the notebook that show the distribution of retained customers as compared to lost customers based on geography, the number of products purchased, age, and customer tenure. Which type of analytics are you performing?",
+      "options": [
+        "diagnostic",
+        "descriptive",
+        "prescriptive",
+        "predictive"
+      ],
+      "answer": "descriptive"
+    },
+    {
+      "id": "q73",
+      "question": "You have a Fabric workspace named Workspace1 that contains a dataflow named Dataflow1. Dataflow1 returns 500 rows of data. You need to identify the min and max values for each column in the query results. Which three Data view options should you select? Each correct answer presents part of the solution.",
+      "options": [
+        "Show column value distribution",
+        "Enable column profile",
+        "Show column profile in details pane",
+        "Show column quality details",
+        "Enable details pane"
+      ],
+      "correct_answers": ["Enable column profile", "Show column profile in details pane", "Enable details pane"]
+    },
+    {
+      "id": "q74",
+      "question": "You have a Fabric tenant that contains a Microsoft Power BI report. You are exploring a new semantic model. You need to display the following column statistics: • Count • Average • Null count • Distinct count • Standard deviation Which Power Query function should you run?",
+      "options": [
+        "Table.schema",
+        "Table.view",
+        "Table.FuzzyGroup",
+        "Table.Profile"
+      ],
+      "answer": "Table.Profile"
+    },
+    {
+      "id": "q75",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains a Delta table named Customer. When you query Customer, you discover that the query is slow to execute. You suspect that maintenance was NOT performed on the table. You need to identify whether maintenance tasks were performed on Customer. Solution: You run the following Spark SQL statement: DESCRIBE DETAIL customer - Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q76",
+      "question": "Solution: You use the following PySpark expression: df.explain().show() Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q77",
+      "question": "You have a Fabric tenant that contains a semantic model named Model1. You discover that the following query performs slowly against Model1. You need to reduce the execution time of the query. Solution: You replace line 4 by using the following code: ISEMPTY ( RELATEDTABLE ( 'Order Item' ) ). Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q78",
+      "question": "Solution: You replace line 4 by using the following code: NOT ISEMPTY ( CALCULATETABLE ( 'Order Item ' ) ) Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes"
+    },
+    {
+      "id": "q79",
+      "question": "You have a Fabric tenant that contains a semantic model named Model1. You discover that the following query performs slowly against Model1. You need to reduce the execution time of the query. Solution: You replace line 4 by using the following code: CALCULATE ( COUNTROWS ( 'Order Item' ) ) >= 0 Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q80",
+      "question": "You have a Fabric tenant that contains a new semantic model in OneLake. You use a Fabric notebook to read the data into a Spark DataFrame. You need to evaluate the data to calculate the min, max, mean, and standard deviation values for all the string and numeric columns. Solution: You use the following PySpark expression: df.explain() Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q81",
+      "question": "You have a Fabric tenant that contains a new semantic model in OneLake. You use a Fabric notebook to read the data into a Spark DataFrame. You need to evaluate the data to calculate the min, max, mean, and standard deviation values for all the string and numeric columns. Solution: You use the following PySpark expression: df.show() Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q82",
+      "question": "You have a Fabric tenant that contains a new semantic model in OneLake. You use a Fabric notebook to read the data into a Spark DataFrame. You need to evaluate the data to calculate the min, max, mean, and standard deviation values for all the string and numeric columns. Solution: You use the following PySpark expression: df.summary() Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes"
+    },
+    {
+      "id": "q83",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains a Delta table named Customer. When you query Customer, you discover that the query is slow to execute. You suspect that maintenance was NOT performed on the table. You need to identify whether maintenance tasks were performed on Customer. Solution: You run the following Spark SQL statement: DESCRIBE HISTORY customer - Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes"
+    },
+    {
+      "id": "q84",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains a Delta table named Customer. When you query Customer, you discover that the query is slow to execute. You suspect that maintenance was NOT performed on the table. You need to identify whether maintenance tasks were performed on Customer. Solution: You run the following Spark SQL statement: REFRESH TABLE customer - Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q85",
+      "question": "You have a Fabric tenant that contains a lakehouse named Lakehouse1. Lakehouse1 contains a Delta table named Customer. When you query Customer, you discover that the query is slow to execute. You suspect that maintenance was NOT performed on the table. You need to identify whether maintenance tasks were performed on Customer. Solution: You run the following Spark SQL statement: EXPLAIN TABLE customer - Does this meet the goal?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No"
+    },
+    {
+      "id": "q86",
+      "question": "You have source data in a folder on a local computer. You need to create a solution that will use Fabric to populate a data store. The solution must meet the following requirements: Support the use of dataflows to load and append data to the data store. Ensure that Delta tables are V-Order optimized and compacted automatically. Which type of data store should you use?",
+      "options": [
+        "a lakehouse",
+        "an Azure SQL database",
+        "a warehouse",
+        "a KQL database"
+      ],
+      "correct_answers": ["a lakehouse", "a warehouse"]
+    }
+  ]
+}
