@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <style>
+          .timer {
+            background-color: blue;
+            font-size: larger;
+            position: fixed;
+            top: 0; /* Place the top edge at the very top of the screen */
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Adjust positioning for element's width */
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+          }
+          
+          
+    </style>
 </head>
 <body>
     <h1>Quiz :: Total Questions: {{ length }}</h1>
-    <form action="/submit_quiz" method="post">
+    <div id="timer" class="timer">00:00</div>
+    <form id="quizForm" action="/submit_quiz" method="post">
         {% for question in questions %}
             <p>{{ question['question'] }}</p>
             {% if 'correct_answers' in question %}
@@ -26,6 +43,33 @@
         {% endfor %}
         <button type="submit">Submit</button>
     </form>
+
+    <script>
+        // Set the duration of the timer in seconds
+        const duration = 1200; // 20 minutes = 20 * 60 seconds
+        let timeLeft = duration;
+
+        // Update the timer display
+        function updateTimer() {
+            const timerElement = document.getElementById('timer');
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        // Start the timer
+        const timerInterval = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimer();
+            } else {
+                clearInterval(timerInterval);
+                // Submit the form when time is up
+                document.getElementById('quizForm').submit();
+            }
+        }, 1000); // Update timer every second
+    </script>
+
 </body>
 </html>
 
